@@ -1,0 +1,40 @@
+<title> Sails Investments- Fruin </title>
+
+
+<h3><u>All Investments</u></h3>
+<table>
+  <tr>
+    <th>Owner ID</th>
+    <th> Investment Category</th>
+    <th>Investment Description</th>
+    <th>Aquired Date</th>
+    <th>Aquired Value</th>
+    <th>Recent Value</th>
+    <th>Recent Date</th>
+  </tr>
+
+  <% _.each(investments, function(investment) { %>
+  <tr data-id="<%= investment.id %>" data-model="investment" >
+    <td><%= investment.owner%></td>
+    <td><%=investment.category%></td>
+    <td><%= investment.description %></td>
+    <td><%= investment.aquired_date %></td>
+    <td><%= investment.aquired_value %></td>
+    <td><%= investment.recent_value%></td>
+    <td><%= investment.recent_date%></td>
+
+    <td><a href="/investment/show/<%= investment.id %>">Show</a></td>
+    <td><a href="/investment/edit/<%= investment.id %>">Edit</a></td>
+    <td><a href="/investment/destroy/<%= investment.id %>">Delete</a></td>
+  </tr>
+  <% }) %>
+</table>
+
+</br>
+<div> <p> <a href="../customer/"> All Customers </a></p> </div>
+<div> <p> <a href="../stock/"> All Stocks </a></p> </div>
+
+
+
+
+

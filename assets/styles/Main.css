@@ -1,0 +1,11 @@
+td, th {
+  border: solid 10px black;
+}
+td {
+  margin-left: 15px;
+}
+
+h1 {
+  color: #a870ff;
+}
+
